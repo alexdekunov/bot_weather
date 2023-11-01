@@ -9,6 +9,6 @@ api_t = os.getenv('API_TELEGRAM')
 api_w = os.getenv('API_WEATHER')
 
 # Вывод переменных окружения
-print(f'Telegram {api_t}')
-print(f'Weather {api_w}')
+# print(f'Telegram {api_t}')
+# print(f'Weather {api_w}')
 

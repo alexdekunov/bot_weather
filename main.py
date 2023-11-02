@@ -12,15 +12,20 @@ def site(message):
     webbrowser.open('http://dexycom.ru')
 
 
-
 @bot.message_handler(commands=['start'])
 def main(message):
     bot.send_message(message.chat.id, f"Привет {message.from_user.first_name} {message.from_user.last_name}")
 
 
 @bot.message_handler(commands=['help'])
-def main(message):
+def help_command(message):
     bot.send_message(message.chat.id, "Помощь <b><u>спешит</u></b> на помощь", parse_mode='html')
+
+
+@bot.message_handler(commands=['menu'])
+def menu_command(message):
+    bot.send_message(message.chat.id, f"/help - Помощь\n/site - Перейти на сайт", parse_mode='html')
+
 
 @bot.message_handler()
 def info(message):
